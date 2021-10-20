@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Evil Dead Project - La mejor web sobre esta saga de culto </title>
+
+    <!-- una fuente de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+    <link href="./css/index.css" rel="stylesheet" />
+    <link href="./css/cine.css" rel="stylesheet" />
+    <link href="./css/dolly.css" rel="stylesheet" />
+    <link href="./css/datos.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- solo aquellos estilos que solo aplican a esta pagina -->
+
+
+    <!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./media/icono.png" />
+    <link href='https://css.gg/css' rel='stylesheet'>
+    <!-- importacion de la libreria de animaciones para fotos -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+</head>
+<!--inicio del body-->
+
+<body>
+    <!--Menú principal-->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+
+                <a href="index.html"><img class="logoblanco" src="./media/logodolly.png" alt="Logo de Evil Dead" height="80px"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <!--logo de cenec-->
+                    <a id="ceneclogo" href="https://www.cenecmalaga.es/" target="_blank"><img id="logocenec" src="./media/logocenec.png" alt="logoCenec"></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Contenedor con foto propia, mapa e información del alumno-->
+    <div class="contenidoalumno">
+        <div class="infopersonal">
+            <div class="mapa ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.9863824873282!2d-4.423728284857691!3d36.722888279964664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f7be389e77bb%3A0x474b76a0184a602e!2sCENEC%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1621442932767!5m2!1ses!2ses "
+                    allowfullscreen=" " loading="lazy " title="Mapa Cenec "></iframe>
+            </div>
+            <div class="fotoalumnoMovil">
+                <a id="enlacelinkedin" href="https://www.linkedin.com/in/miguel-%C3%A1ngel-arcos-reyes-a2b871b5/" target="_blank"><img src="./media/MiguelAngel.png" alt="Foto mía"></a>
+            </div>
+            <!--texto del alumno-->
+            <div class="textoalumno">
+                <h2>Nombre:</h2>
+                <p>Miguel Ángel Arcos Reyes.</p><br>
+                <h2>Centro:</h2>
+                <p>Cenec Málaga.</p><br>
+                <h2>Titulación y curso:</h2>
+                <p>1º Desarrollo de Aplicaciones Multiplataforma.</p><br>
+                <h2>Asignaturas:</h2>
+                <p>Lenguaje de Marcas.</p>
+                <p>Sistemas Informáticos. </p>
+                <p>Entornos de Desarrollo.</p><br>
+                <h2>Profesor:</h2>
+                <p>Carlos Boni Niklison.</p><br>
+                <h2>Fecha:</h2>
+                <p>31 de mayo de 2021.</p><br>
+            </div>
+            <!--mapa visible en móvil-->
+            <div class="mapaMovil">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.9863824873282!2d-4.423728284857691!3d36.722888279964664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f7be389e77bb%3A0x474b76a0184a602e!2sCENEC%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1621442932767!5m2!1ses!2ses "
+                    allowfullscreen=" " loading="lazy " title="Mapa Cenec "></iframe>
+            </div>
+            <div class="fotoalumno">
+                <a id="enlacelinkedin" href="https://www.linkedin.com/in/miguel-%C3%A1ngel-arcos-reyes-a2b871b5/" target="_blank"><img src="./media/MiguelAngel.png" alt="Foto mía"></a>
+            </div>
+
+            <!--logo de cenec visible en movil-->
+            <a id="ceneclogoMovil" href="https://www.cenecmalaga.es/" target="_blank"><img id="logocenecMovil" src="./media/logocenec.png" alt="logoCenec"></a>
+        </div>
+        <!--diagramas y documentos varios-->
+        <div class="GrupoDocumentos">
+            <div class="documentosIndividuales">
+                <a href="./media/diagrama1.jpg" target="_blank"><img class="documentos1" src="./media/diagrama1.jpg" alt="diagrama1"></a>
+            </div>
+            <div class="documentosIndividuales">
+                <a href="./media/diagrama2.jpg" target="_blank"><img class="documentos1" src="./media/diagrama2.jpg" alt="diagrama2"></a>
+            </div>
+        </div>
+        <div class="GrupoDocumentos">
+            <div class="documentosIndividuales">
+                <a href="./media/diagrama3.jpg" target="_blank"><img class="documentos1" src="./media/diagrama3.jpg" alt="diagrama3"></a>
+            </div>
+            <div class="documentosIndividuales" id="documentos2">
+                <a href="./media/diagrama4.jpg" target="_blank"><img class="documentos1" src="./media/diagrama4.jpg" alt="diagrama4"></a>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer con enlaces a redes sociales, Dolly y Modo día/noche-->
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <p>
+                    <a href="https://www.linkedin.com/in/miguel-%C3%A1ngel-arcos-reyes-a2b871b5/" id="linkedin" target="_blank">  Miguel Ángel Arcos</a> Copyright © 2021 - CENEC 1º DAM - Proyecto Web</p>
+                <a href="https://cutt.ly/Vvu2NcD" target="_blank"><img class="ytnormal" src="./media/youtube-logo.png" alt="Logo Youtube" height="30px"></a>
+                <a href="https://twitter.com/EvilDead" target="_blank"><img class="twnormal" src="./media/Twitter-Logo.png" alt="Logo Twitter" height="30px"></a>
+                <a href="https://www.instagram.com/ashvsevildead/?hl=es" target="_blank"><img class="ignormal" src="./media/instagram-logo.png" alt="Logo instagram" height="30px"></a>
+                <a href="./dolly.html"><img class="dollynormal" src="./media/DOLLY-logo.png" alt="Logo dolly" height="30px"></a>
+                <a class="botomododia"><img onclick="cambiarModo()" src="./media/botonsol.png" alt="boton modo noche" height="30px"></a>
+                <a class="botomodonoche"> <img onclick="cambiarModo2()" src="./media/lunaboton.png" alt="boton modo noche" height="30px"></a>
+            </div>
+
+
+
+        </div>
+    </footer>
+
+    <!--importación de javascript-->
+    <script src="./js/login.js"></script>
+</body>
+
+
+</html>

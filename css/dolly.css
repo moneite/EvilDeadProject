@@ -1,0 +1,188 @@
+/*
+css
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+*/
+
+
+/*Importación de diferentes fuentes de google*/
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+.container {
+    width: 100%;
+}
+
+
+/*logo con el enlace al pdf*/
+
+#logopdf {
+    height: 90%;
+}
+
+#pdf {
+    width: 167px;
+    margin-right: 5px;
+}
+
+
+/*contenedor con las imágenes*/
+
+.container2 {
+    width: 100%;
+    max-width: 1060px;
+    background: #000;
+    overflow: hidden;
+    margin: 25px auto;
+    position: relative;
+    height: 300px;
+    padding-top: 300px;
+}
+
+
+/*animación que se aplica al fondo de la imagen que hace el efecto dolly*/
+
+.container2:hover .background {
+    -webkit-transform: scale(0.8) translate(-50%, -50%);
+    -ms-transform: scale(0.8) translate(-50%, -50%);
+    transform: scale(0.4) translate(-50%, -50%);
+}
+
+
+/*animacion que se le aplica a la imagen frontal o .png sobre la que se hace el efecto dolly*/
+
+.container2:hover .front {
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+
+/*caracteristicas del la imagen de fondo del dolly*/
+
+.background {
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transition: -webkit-transform 1s;
+    transition: transform 1s;
+}
+
+#ashDolly {
+    width: 50%;
+}
+
+
+/*imagen frontal del dolly*/
+
+.front {
+    top: 5%;
+    left: 37.8%;
+    z-index: 1;
+    position: absolute;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 1s;
+    -webkit-transform: translate( -50%);
+    -ms-transform: translate( -50%);
+    transform: translate( -50%);
+    transition: transform 1s;
+    padding-top: 200px;
+}
+
+.MensajeMovil {
+    display: none;
+}
+
+
+/*contenedor que tiene la imagen a la que se le aplica el efecto ken burns*/
+
+.image-wrap {
+    width: 100%;
+    height: 50vw;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/*imagen a la qeue se le aplica la animacion del efecto ken burns*/
+
+.image-wrap img {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    animation: move 40s ease;
+    /* Add infinite to loop. */
+    -ms-animation: move 40s ease;
+    -webkit-animation: move 40s ease;
+    -moz-animation: move 40s ease;
+    position: absolute;
+}
+
+
+/*efecto ken burns que consiste en que la imagen aumenta progresivamenete desde su tamaño de 100% hasta el 120%*/
+
+@-webkit-keyframes move {
+    0% {
+        -webkit-transform-origin: bottom left;
+        -moz-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+        -o-transform-origin: bottom left;
+        transform-origin: bottom left;
+        transform: scale(1.0);
+        -ms-transform: scale(1.0);
+        /* IE 9 */
+        -webkit-transform: scale(1.0);
+        /* Safari y Chrome */
+        -o-transform: scale(1.0);
+        /* Opera */
+        -moz-transform: scale(1.0);
+        /* Firefox */
+    }
+    100% {
+        transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        /* IE 9 */
+        -webkit-transform: scale(1.2);
+        /* Safari y Chrome */
+        -o-transform: scale(1.2);
+        /* Opera */
+        -moz-transform: scale(1.2);
+        /* Firefox */
+    }
+}
+
+
+/*Ocultamos los efectos en el modo movil y hacemos visible un mensaje*/
+
+@media all and (max-width: 900px) {
+    h1 {
+        color: aliceblue;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        font-size: 20px;
+    }
+    .container2 {
+        display: none;
+    }
+    .MensajeMovil {
+        padding: 10%;
+        padding-top: 140px;
+        display: block;
+    }
+    #ashfigure {
+        width: 78%;
+        display: block;
+        margin: auto;
+    }
+}

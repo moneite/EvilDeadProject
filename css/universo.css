@@ -1,0 +1,512 @@
+/*
+css
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+*/
+
+
+/*Importación de diferentes fuentes de google*/
+
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,400;1,500&family=Bebas+Neue&display=swap');
+
+/*sección divisoria donde se muestra cartel informativo de comics*/
+
+.home {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 45em 0 #000;
+    background: url('../media/bgcomics2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 300PX;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Logos junto al nombre de cada seccion del menu ocultos*/
+
+#sierra,
+#escopeta,
+#cabaña {
+    display: none;
+}
+
+
+/*aparicion de las imágenes cuando haces hover en las palabras del menú*/
+
+#cine:hover img,
+#zonafanenlace:hover img,
+#sobremienlace:hover img {
+    display: inline;
+    height: 35px;
+}
+
+
+/*cambio de color de las letras al hacer hover*/
+
+#cine:hover,
+#zonafanenlace:hover,
+#sobremienlace:hover {
+    color: red;
+}
+
+
+/*letras de sección actual en rojo y su icono visible*/
+
+#universo {
+    color: red;
+}
+
+#libro {
+    display: inline;
+    height: 35px;
+}
+
+
+/*sección en la que no estoy en blanco*/
+
+#cine,
+#zonafanenlace,
+#sobremienlace {
+    color: white;
+}
+
+
+/*cartel informativo divisorio de sección*/
+
+#videojuegos {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 45em 0 #000;
+    background: url('../media/bgcomics.png');
+    overflow-y: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 300PX;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+#divh1 {
+    width: 100%;
+    height: fit-content;
+}
+
+#divVideojuegos {
+    width: 100%;
+    height: fit-content;
+}
+
+h1 {
+    font-family: "Luckiest Guy", cursive;
+    text-align: center;
+    margin: 0;
+    font-size: 8em;
+    padding: 0;
+    color: white;
+    vertical-align: center;
+    text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+}
+
+h1 span {
+    transform: scale(0.9);
+    display: inline-block;
+}
+
+
+/*el primer span dentro del h1 se le aplica esta animación*/
+
+h1 span:first-child {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+
+/*el segundo span dentro del h1 se le aplica esta animación*/
+
+h1 span:last-child {
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+
+/*definición de fuente, sombra del texto y fuente del h1 de videojuegos*/
+
+#divVideojuegos h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    text-align: center;
+    margin: 0;
+    font-size: 8em;
+    padding: 0;
+    color: white;
+    text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+}
+
+
+/*animación que hace que un elemento aumente del 90% de escala al 100%*/
+
+@keyframes bop {
+    0% {
+        transform: scale(0.9);
+    }
+    50%,
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*animación que hace que un elemento aumente del 90% de escala al 100% y se rote en -3 grados*/
+
+@keyframes bopB {
+    0% {
+        transform: scale(0.9);
+    }
+    80%,
+    100% {
+        transform: scale(1) rotateZ(-3deg);
+    }
+}
+
+.comics {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+    margin: auto;
+}
+
+.comics img {
+    width: 13%;
+    padding-left: 5%;
+    transform: rotate(-20deg);
+    filter: grayscale(80%);
+}
+
+
+/*al pasar el raton sobre esta imagen se cambia dicha imagen por un .gif en movimiento y se le deshace el filtro de escala de grises
+ y al mismo tiempo se le aplica la animación correspondiente*/
+
+.comics #ArmyVsMarvel:hover {
+    filter: grayscale(0%);
+    animation: imgAvsM 4s linear infinite alternate;
+    content: url('../media/comics/marvelZombies.gif');
+}
+
+
+/*animación que juega con el tamaño de la imagen aumentándolo y disminuyéndolo, además de aplicarle una deformación de 1 grado*/
+
+@keyframes imgAvsM {
+    0% {
+        transform: skew(1deg) scale(1.2);
+    }
+    25% {
+        transform: skew(-1deg);
+    }
+    50% {
+        transform: skew(1deg) scale(1.2);
+    }
+    75% {
+        transform: skew(-1deg);
+    }
+    100% {
+        transform: skew(1deg) scale(1.2);
+    }
+}
+
+
+/*al pasar el raton sobre esta imagen se cambia dicha imagen por un .gif en movimiento y se le deshace el filtro de escala de grises
+ y al mismo tiempo se le aplica la animación correspondiente*/
+
+.comics #A2A:hover {
+    filter: grayscale(0%);
+    animation: imgAvsM 3s linear infinite alternate;
+    content: url('../media/comics/A2A.gif');
+}
+
+
+/*al pasar el raton sobre esta imagen se cambia dicha imagen por un .gif en movimiento y se le deshace el filtro de escala de grises
+ y al mismo tiempo se le aplica la animación correspondiente*/
+
+.comics #FTA:hover {
+    filter: grayscale(0%);
+    animation: imgAvsM 3s linear infinite alternate;
+    content: url('../media/comics/FTA.gif');
+}
+
+
+/*al pasar el raton sobre esta imagen se cambia dicha imagen por un .gif en movimiento y se le deshace el filtro de escala de grises
+ y al mismo tiempo se le aplica la animación correspondiente*/
+
+.comics #TLR:hover {
+    filter: grayscale(0%);
+    animation: imgAvsM 3s linear infinite alternate;
+    content: url('../media/comics/TLR.gif');
+}
+
+
+/*al pasar el raton sobre esta imagen se cambia dicha imagen por un .gif en movimiento y se le deshace el filtro de escala de grises
+ y al mismo tiempo se le aplica la animación correspondiente*/
+
+.comics #ATA:hover {
+    filter: grayscale(0%);
+    animation: atatlr 6s linear infinite alternate;
+    content: url('../media/comics/ATA.gif');
+}
+
+
+/*animación que juega con el tamaño de la imagen aumentándolo y disminuyéndolo, además de aplicarle una deformación de 1 grado*/
+
+@keyframes atatlr {
+    0% {
+        transform: skew(1deg) scale(1.2);
+    }
+    15% {
+        transform: skew(-1deg);
+    }
+    30% {
+        transform: skew(1deg) scale(1.2);
+    }
+    45% {
+        transform: skew(-1deg);
+    }
+    60% {
+        transform: skew(1deg) scale(1.2);
+    }
+    75% {
+        transform: skew(-1deg);
+    }
+    90% {
+        transform: skew(1deg) scale(1.2);
+    }
+    100% {
+        transform: skew(-1deg);
+    }
+}
+
+
+/*ficha de  juego que contiene como fondo un gif, de forma que al verse en la web parezca un vídeo puesto de forma permanente*/
+
+#fichaJuego {
+    display: flex;
+    padding-left: 3%;
+    padding-right: 2%;
+    background: url('../media/evildeadc64.gif');
+    background-position-x: 98%;
+    background-repeat: no-repeat;
+    padding-bottom: 5%;
+}
+
+
+/*ficha de  juego que contiene como fondo un gif, de forma que al verse en la web parezca un vídeo puesto de forma permanente*/
+
+#fichaJuego2 {
+    display: flex;
+    padding-left: 1%;
+    padding-right: 3%;
+    background: url('../media/evildeadpsx.gif');
+    background-position-x: 65%;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    padding-bottom: 5%;
+}
+
+
+/*ficha de  juego que contiene como fondo un gif, de forma que al verse en la web parezca un vídeo puesto de forma permanente*/
+
+#fichaJuego3 {
+    display: flex;
+    padding-left: 3%;
+    padding-right: 2%;
+    background: url('../media/evildeadps2.gif');
+    background-position-x: 98%;
+    background-repeat: no-repeat;
+    padding-bottom: 5%;
+}
+
+
+/*ficha de  juego que contiene como fondo un gif, de forma que al verse en la web parezca un vídeo puesto de forma permanente*/
+
+#fichaJuego4 {
+    display: flex;
+    padding-left: 1%;
+    padding-right: 3%;
+    background: url('../media/evildeadreg.gif');
+    background-position-x: 65%;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    padding-bottom: 5%;
+}
+
+#textoFicha {
+    font-size: 20px;
+}
+
+#textoFicha h2 {
+    padding-left: 3%;
+    font-size: 45px;
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(255, 28, 28);
+}
+
+#textoFicha p {
+    padding-left: 3%;
+    font-size: 18px;
+}
+
+#textoFicha a {
+    color: white;
+}
+
+.tituloderecha h2 {
+    padding-right: 2%;
+}
+
+.tituloderecha p {
+    text-align: left;
+    padding-right: 2%;
+}
+
+#portadaC64 {
+    width: 30%;
+    height: auto;
+}
+
+
+/*al hacer hover en esta imagen se sustituye por otra y se le aplica una animación*/
+
+#portadaC64:hover {
+    content: url('../media/videojuegos/evil_dead_c64.png');
+    animation: c64 linear infinite 4s alternate;
+}
+
+#portadaps2 {
+    width: 30%;
+    height: auto;
+}
+
+
+/*al hacer hover en esta imagen se sustituye por otra y se le aplica una animación*/
+
+#portadaps2:hover {
+    content: url('../media/videojuegos/evil_dead_ps2.png');
+    animation: c64 linear infinite 4s alternate;
+}
+
+
+/*al hacer hover en esta imagen se sustituye por otra y se le aplica una animación*/
+
+#portadapsx {
+    width: 25%;
+}
+
+
+/*al hacer hover en esta imagen se sustituye por otra y se le aplica una animación*/
+
+#portadapsx:hover {
+    content: url('../media/videojuegos/evil_dead_psx.png');
+    animation: c64 linear infinite 4s alternate;
+}
+
+#portadareg {
+    width: 25%;
+}
+
+
+/*al hacer hover en esta imagen se sustituye por otra y se le aplica una animación*/
+
+#portadareg:hover {
+    content: url('../media/videojuegos/evil_dead_reg.png');
+    animation: c64 linear infinite 4s alternate;
+}
+
+
+/*partes solo visibles en móvil*/
+
+#videoMovil {
+    display: none;
+}
+
+#brMovilVisible {
+    display: none;
+}
+
+#portadapsxmovil {
+    display: none;
+}
+
+
+/*animación que altera el tamaño hasta el 110% del elemento al que se le aplique*/
+
+@keyframes c64 {
+    0% {}
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+/*Estilos aplicados cuando las dimensiones de la pantalla tienen un ancho inferior a 968px*/
+
+@media screen and (max-width:968px) {
+    #TLR {
+        display: block;
+        margin: auto;
+    }
+    h1 {
+        padding-top: 60px;
+        font-size: 60px;
+    }
+    .home {
+        background-size: cover;
+    }
+    .comics {
+        display: block;
+        overflow-y: hidden;
+    }
+    .comics img {
+        width: 40%;
+        padding-left: 5%;
+        filter: grayscale(90%);
+        transform: rotate(0deg);
+    }
+    #fichaJuego,
+    #fichaJuego2,
+    #fichaJuego3,
+    #fichaJuego4 {
+        display: block;
+        background: none;
+    }
+    #textoFicha h2 {
+        text-align: center;
+    }
+    #videoMovil {
+        display: block;
+        width: 90%;
+        margin: auto;
+    }
+    #brMovil,
+    #portadapsx,
+    #portadareg {
+        display: none;
+    }
+    #portadapsxmovil,
+    #portadaC64,
+    #portadaps2 {
+        margin: auto;
+        display: block;
+        width: 50%;
+    }
+    #portadapsxmovil:hover {
+        content: url('../media/videojuegos/evil_dead_psx.png');
+        animation: c64 linear infinite 4s alternate;
+    }
+    #brMovilVisible {
+        display: block;
+    }
+}

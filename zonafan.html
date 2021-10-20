@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Evil Dead Project - La mejor web sobre esta saga de culto </title>
+
+    <!-- una fuente de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+    <link href="./css/index.css" rel="stylesheet" />
+    <link href="./css/cine.css" rel="stylesheet" />
+    <link href="./css/zonafan.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- solo aquellos estilos que solo aplican a esta pagina -->
+
+
+    <!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./media/icono.png" />
+    <link href='https://css.gg/css' rel='stylesheet'>
+    <!-- importacion de la libreria de animaciones para fotos -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+</head>
+<!--inicio del body-->
+
+<body>
+    <!--Menú principal-->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+
+                <a href="index.html"><img class="logoblanco" src="./media/logoblanco.png" alt="Logo de Evil Dead" height="80px"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <a id="cine" href="cine.html"><img id="sierra" src="./media/chainsaw.png" alt="Sierra de Evil Dead">Cine</a>
+                    </li>
+                    <li>
+                        <a id="universo" href="universo.html"><img id="libro" src="./media/libro.png " alt="Libro de Evil Dead">Universo</a>
+                    </li>
+                    <li id="ZonaFan">
+                        <a href="./zonafan.html" id="zonafanenlace"><img id="escopeta" src="./media/escopeta.png" alt="Escopeta de Evil Dead">Zona Fan</a>
+                    </li>
+                    <li id="sobreMi">
+                        <a href="./datos.html" id="sobremienlace"><img id="cabaña" src="./media/cabaña.png " alt="Cabaña de Evil Dead">Sobre Mí</a>
+                    </li>
+                    <li id="loginOculto">
+                        <a href="login.html"><img id="login" class="loginIcono" src="./media/login.png " alt="icono de login"></a>
+                    </li>
+                    <div id="conectado"></div>
+
+                    <li id="logOutTxt">
+                        <a onclick="cerrarSesion()"><img id="logout" class="loginIcono" src="./media/logout.png " alt="icono de logout"></a>
+                    </li>
+                </ul>
+            </div>
+            <span class="navTrigger ">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+
+        </div>
+    </nav>
+    <!--Primera Sección que incluye la cabecera-->
+    <section class="home">
+    <div id="divh1"><h1> <span id="zona"><br>ZONA</span><span id="fan">FAN</span></h1>
+            </section>
+            <!--Descripción de la sección-->
+            <div id="presentacion">
+                <p>ESTA ZONA ES EXCLUSIVA PARA USUARIOS REGISTRADOS.
+                    <BR> AQUÍ PODRÁS DISFRUTAR DE MAKING OF, ENTREVISTAS Y DATOS INTERESANTES.
+                </p>
+            </div>
+            <!--Cartel Informativo-->
+            <div id="contenidos">
+                <div id="makingof">
+                    <h2 id="makingletras">MAKING OF</h2>
+                </div>
+            </div>
+            <!--Logos de las peliculas que redirigen al making of de cada una-->
+            <div class="logos">
+                <div>
+                    <a href="https://youtu.be/hxX1vQuDizA" target="_blank"><img class="logomaking" id="logomaking1" src="./media/logoEV1Making.png" alt="Logo Evil Dead "></a>
+                </div>
+                <div>
+                    <a href="https://youtu.be/hN-WJQeaVcg" target="_blank"><img class="logomaking" id="logomaking2" src="./media/logoEV2Making.png" alt="Logo Evil Dead 2"></a>
+                </div>
+                <div>
+                    <a href="https://youtu.be/ofSuLv6KUzk" target="_blank"><img class="logomaking" id="logomaking3" src="./media/logoEV3Making.png" alt="Logo Army Of Darkness"></a>
+                </div>
+                <div id="divyt4">
+                    <a href="https://youtu.be/7bqLEHgt08M" target="_blank"><img class="logomaking" id="logomaking4" src="./media/logoEV4Making.png" alt="Logo Ash vS Evil Dead "></a>
+                </div>
+            </div>
+            <div class="logos" id="ytpc">
+                <div> <img id="yt1" class="logomaking" src="./media/verenYT.png" alt="Cartel Ver en Youtube"></div>
+                <div> <img id="yt2" class="logomaking" src="./media/verenYT.png" alt="Cartel Ver en Youtube"></div>
+                <div> <img id="yt3" class="logomaking" src="./media/verenYT.png" alt="Cartel Ver en Youtube"></div>
+                <div> <img id="yt4" class="logomaking" src="./media/verenYT.png" alt="Cartel Ver en Youtube"></div>
+            </div>
+            <!--Cartel Informativo-->
+            <div id="contenidos">
+                <div id="makingof">
+                    <h2 id="makingletras">ENTREVISTAS</h2>
+                </div>
+            </div>
+            <!--iframes de Youtube con entrevistas-->
+            <div id="entrevistas">
+
+                <iframe src="https://www.youtube.com/embed/9BYA8iE-sIc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                <iframe src="https://www.youtube.com/embed/E1nFTrBIAkI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+
+            <div id="entrevistas">
+
+                <iframe src="https://www.youtube.com/embed/4Sa1iX3G9hw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+                <iframe src="https://www.youtube.com/embed/WDbYhV_Obqc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+            <!--Cartel Informativo-->
+            <div id="contenidos">
+                <div id="makingof">
+                    <h2 id="makingletras">FANDOM</h2>
+                </div>
+            </div>
+            <!--Fotos de fans que redirigen a paginas del fandom-->
+            <div class="imagenesfans">
+                <div class="fotoburn">
+                    <a href="https://www.facebook.com/ladies.of.evil.dead" target="_blank"><img class="galleryfans" id="sl1" src="./media/sliderfans/SL1.jpg" alt="Logo Evil Dead "></a>
+                </div>
+                <div class="fotoburn">
+                    <a href="https://evildeadthemusical.com/" target="_blank"><img class="galleryfans" id="sl1" src="./media/sliderfans/SL2.jpg" alt="Logo Evil Dead "></a>
+                </div class="fotoburn">
+                <div class="fotoburn">
+                    <a href="https://www.tumblr.com/tagged/the+evil+dead?sort=top" target="_blank"> <img class="galleryfans" id="sl1" src="./media/sliderfans/SL3.png" alt="Logo Evil Dead "></a>
+                </div>
+                <div class="fotoburn">
+                    <a href="https://www.bruce-campbell.com/" target="_blank"> <img class="galleryfans" id="sl1" src="./media/sliderfans/SL4.jpg" alt="Logo Evil Dead "></a>
+                </div>
+            </div>
+
+
+</body>
+<!--Footer con enlaces a redes sociales, Dolly y Modo día/noche-->
+<footer>
+    <div class="footer ">
+        <div class="row ">
+            <p>
+                <a href="https://www.linkedin.com/in/miguel-%C3%A1ngel-arcos-reyes-a2b871b5/ " id="linkedin " target="_blank ">  Miguel Ángel Arcos</a> Copyright © 2021 - CENEC 1º DAM - Proyecto Web</p>
+            <a href="https://cutt.ly/Vvu2NcD " target="_blank "><img class="ytnormal " src="./media/youtube-logo.png " alt="Logo Youtube " height="30px "></a>
+            <a href="https://twitter.com/EvilDead " target="_blank "><img class="twnormal " src="./media/Twitter-Logo.png " alt="Logo Twitter " height="30px "></a>
+            <a href="https://www.instagram.com/ashvsevildead/?hl=es " target="_blank "><img class="ignormal " src="./media/instagram-logo.png " alt="Logo instagram " height="30px "></a>
+            <a href="./dolly.html"><img class="dollynormal" src="./media/DOLLY-logo.png" alt="Logo dolly" height="30px"></a>
+            <a class="botomododia"><img onclick="cambiarModo()" src="./media/botonsol.png" alt="boton modo noche" height="30px"></a>
+            <a class="botomodonoche"> <img onclick="cambiarModoFan()" src="./media/lunaboton.png" alt="boton modo noche" height="30px"></a>
+
+        </div>
+
+
+
+    </div>
+</footer>
+
+<!--importación de javascript-->
+<script src="./js/login.js "></script>
+<script src="./js/cine.js "></script>
+<script src="./js/universo.js "></script>
+<script src="./js/zonafan.js "></script>
+<script src="./js/slider.js "></script>
+</body>
+
+</html>

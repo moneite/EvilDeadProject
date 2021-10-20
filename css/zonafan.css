@@ -1,0 +1,357 @@
+/*
+css
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+*/
+
+
+/*Importación de diferentes fuentes de google*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bahianita&family=Dosis&family=Fugaz+One&family=Josefin+Sans:ital,wght@1,100&display=swap');
+.home {
+    background-size: auto;
+    min-height: 0px;
+    box-shadow: none;
+}
+
+
+/*establecemos el fondo y las caracteristicas del body*/
+
+body {
+    background-image: url('../media/bgzonavip.png');
+    background-size: contain;
+    background-repeat: round;
+    min-height: 0px;
+    overflow-x: hidden;
+}
+
+#divh1 {
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 10em;
+    padding: 0;
+    color: white;
+    vertical-align: center;
+    text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1), 0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1), 0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1), -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+}
+
+h1 span {
+    transform: scale(0.9);
+    display: inline-block;
+}
+
+
+/*filtro y animación aplicada al primer span que aparece en el h1*/
+
+h1 span:first-child {
+    filter: invert(1);
+    transform: scale(0.8);
+    animation: traslado 1s forwards alternate;
+}
+
+
+/*filtro y animación aplicada al segundo span que aparece en el h1*/
+
+h1 span:last-child {
+    filter: invert(1);
+    animation: traslado2 2s forwards alternate;
+}
+
+
+/*animación que realiza el movimiento en el eje x del objeto al que se le aplique además de invertir sus colores*/
+
+@keyframes traslado {
+    0% {
+        transform: translateX(-100%);
+    }
+    95% {
+        transform: translateX(5%);
+    }
+    100% {
+        transform: translateX(-8%);
+        filter: invert(0);
+        transform: scale(0.8);
+    }
+}
+
+
+/*animación que realiza el movimiento en el eje x del objeto al que se le aplique además de invertir sus colores*/
+
+@keyframes traslado2 {
+    0% {
+        transform: translateX(200%);
+    }
+    95% {
+        transform: translateX(-5%);
+    }
+    100% {
+        transform: translateX(0%);
+        filter: invert(0);
+        transform: scale(0.8);
+    }
+}
+
+
+/*logos invisibles*/
+
+#sierra,
+#libro,
+#cabaña {
+    display: none;
+}
+
+
+/*logos que aparecen al hacer hover*/
+
+#cine:hover img,
+#universo:hover img,
+#sobremienlace:hover img {
+    display: inline;
+    height: 35px;
+}
+
+
+/*cambio de color con el hover*/
+
+#cine:hover,
+#universo:hover,
+#sobremienlace:hover {
+    color: red;
+}
+
+#zonafanenlace {
+    color: red;
+}
+
+#cine {
+    color: white;
+}
+
+#universo {
+    color: white;
+}
+
+#escopeta {
+    display: inline;
+    height: 35px;
+}
+
+#zona {
+    font-family: 'Dosis', sans-serif;
+}
+
+#fan {
+    font-family: 'Fugaz One', cursive;
+}
+
+
+/*estilo del cartel de making of y aplicación de su animación correspondiente*/
+
+#makingletras {
+    font-size: 6em;
+    color: black;
+    animation: text-shadow 5s infinite;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: dotted;
+}
+
+#presentacion {
+    padding-bottom: 1%;
+}
+
+#presentacion p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+}
+
+#contenidos {
+    width: 100%;
+}
+
+#makingof {
+    width: fit-content;
+    display: block;
+    margin: auto;
+}
+
+
+/*background de la cabecera de la web de zona fan*/
+
+#divh1 {
+    background-image: url('../media/bgviphead.png');
+    background-size: cover;
+}
+
+.logos {
+    width: 100%;
+    display: flex;
+}
+
+.logos div img {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+#yt1 {
+    transform: translateX(-300%);
+}
+
+#yt2 {
+    transform: translateX(-500%);
+}
+
+#yt3 {
+    transform: translateX(500%);
+}
+
+#yt4 {
+    transform: translateX(300%);
+}
+
+.logomaking {
+    transition: 1s;
+}
+
+.logomaking:hover {
+    transition: 1s;
+    transform: scale(0.8);
+}
+
+
+/*fondo de la sección que incluye las entrevistas de los actores y actrices*/
+
+#entrevistas {
+    margin-left: 5%;
+    width: 90%;
+    display: flex;
+    padding-top: 3%;
+    z-index: 1;
+    background-image: url('../media/dirt-clipart-splatter-11.png');
+    background-size: contain;
+    background-repeat: round;
+}
+
+
+/*iframe que contiene los vídeos de youtube*/
+
+iframe {
+    padding-left: 1%;
+    width: 50%;
+    height: 500px;
+}
+
+.imagenesfans {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.galleryfans {
+    display: block;
+    margin: auto;
+    width: 80%;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    vertical-align: middle;
+}
+
+.galleryfans:hover {
+    animation: move 10s ease;
+    -webkit-transform: scale(1.1);
+    /* Safari and Chrome */
+    -moz-transform: scale(1.1);
+    /* Firefox */
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -o-transform: scale(1.1);
+    /* Opera */
+    transform: scale(1.1);
+}
+
+
+/*animación que realiza un traslado con retraso uno del otro de una sombra formada a partir del texto con diferentes colroes cada sombra*/
+
+@keyframes text-shadow {
+    0% {
+        transform: translateY(0);
+        text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+    }
+    20% {
+        transform: translateY(-1em);
+        text-shadow: 0 0.125em 0 #0c2ffb, 0 0.25em 0 #2cfcfd, 0 -0.125em 0 #fb203b, 0 -0.25em 0 #fefc4b;
+    }
+    40% {
+        transform: translateY(0.5em);
+        text-shadow: 0 -0.0625em 0 #0c2ffb, 0 -0.125em 0 #2cfcfd, 0 0.0625em 0 #fb203b, 0 0.125em 0 #fefc4b;
+    }
+    60% {
+        transform: translateY(-0.25em);
+        text-shadow: 0 0.03125em 0 #0c2ffb, 0 0.0625em 0 #2cfcfd, 0 -0.03125em 0 #fb203b, 0 -0.0625em 0 #fefc4b;
+    }
+    65% {
+        transform: translateY(0);
+        text-shadow: 0 0 0 #0c2ffb, 0 0 0 #2cfcfd, 0 0 0 #fb203b, 0 0 0 #fefc4b;
+        filter: invert(1);
+    }
+}
+
+
+/*diferentes parámetros para adaptar lo anterior a móvil*/
+
+@media screen and (max-width:968px) {
+    .logos {
+        display: block;
+    }
+    #divyt4 {
+        padding-top: 5%;
+        padding-bottom: 8%;
+    }
+    #presentacion p {
+        font-size: 30px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .logos div img {
+        width: 45%
+    }
+    #ytpc {
+        display: none;
+    }
+    #entrevistas {
+        display: block;
+    }
+    iframe {
+        display: block;
+        margin: auto;
+        width: 60%;
+        height: 250px;
+        padding-bottom: 2%;
+    }
+    .imagenesfans {
+        display: block;
+        background-image: url('../media/patron.png');
+        background-size: cover;
+        background-repeat: repeat-y;
+    }
+    .fotoburn {
+        width: 60%;
+        display: block;
+        margin: auto;
+        padding-bottom: 2%;
+    }
+}

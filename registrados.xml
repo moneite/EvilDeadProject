@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<registrados xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Users/monei/OneDrive/Escritorio/FP/Lenguaje%20de%20Marcas/3%20Trimestre/registrados.xsd">
+  <usuario nro="1">
+    <nombre>USR1</nombre>
+    <clave>CLAVE1</clave>
+  </usuario>
+  <usuario nro="2">
+    <nombre>USR2</nombre>
+    <clave>CLAVE2</clave>
+  </usuario>
+  <usuario nro="3">
+    <nombre>USR3</nombre>
+    <clave>CLAVE3</clave>
+  </usuario>
+   <usuario nro="4">
+    <nombre>USR4</nombre>
+    <clave>CLAVE4</clave>
+  </usuario>
+   <usuario nro="5">
+    <nombre>MIGUEL</nombre>
+    <clave>ARCOS</clave>
+  </usuario>
+</registrados>

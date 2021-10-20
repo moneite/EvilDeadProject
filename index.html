@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Evil Dead Project - La mejor web sobre esta saga de culto </title>
+
+    <!-- import de fuentes de google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+    <link href="./css/index.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./media/icono.png" />
+    <link href='https://css.gg/css' rel='stylesheet'>
+
+    <!-- importacion de la libreria de animaciones para fotos -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+</head>
+
+<!--inicio del body-->
+
+<body>
+    <!--Menú principal-->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+
+                <a href="index.html"><img class="logoblanco" src="./media/logoblanco.png" alt="Logo de Evil Dead" height="80px"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <a id="cine" href="cine.html"><img id="sierra" src="./media/chainsaw.png" alt="Sierra de Evil Dead">Cine</a>
+                    </li>
+                    <li>
+                        <a id="universo" href="universo.html"><img id="libro" src="./media/libro.png " alt="Libro de Evil Dead">Universo</a>
+                    </li>
+                    <li id="ZonaFan">
+                        <a href="./zonafan.html"><img id="escopeta" src="./media/escopeta.png" alt="Escopeta de Evil Dead">Zona Fan</a>
+                    </li>
+                    <li id="sobreMi">
+                        <a href="./datos.html"><img id="cabaña" src="./media/cabaña.png " alt="Cabaña de Evil Dead">Sobre Mí</a>
+                    </li>
+                    <li id="loginOculto">
+                        <a href="login.html"><img id="login" class="loginIcono" src="./media/login.png " alt="icono de login"></a>
+                    </li>
+                    <div id="conectado"></div>
+
+                    <li id="logOutTxt">
+                        <a onclick="cerrarSesion()"><img id="logout" class="loginIcono" src="./media/logout.png " alt="icono de logout"></a>
+                    </li>
+                </ul>
+            </div>
+            <span class="navTrigger ">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+    <!--Primera Sección-->
+    <section class="home ">
+
+
+        <img id="logoGrande" src="./media/LOGOSUPER.png " alt="Logo de Evil Dead">
+    </section>
+    <h1 class="myH2 ">¿Qué es Evil Dead?</h1>
+
+    <div id=div2>
+        <p class="myP ">
+            Evil Dead es una franquicia de Terror creada por Sam Raimi. Esta franquicia se ha convertido en una obra de culto entre todos sus seguidores. Cuenta con 3 películas, un reboot, una serie de televisión, comics, videojuegos, etc. Sin ninguna duda, es un
+            gran estandarte de la cultura pop para todos los amantes del terror y la comedia. Una de las grandes características de la saga es el personaje de Ash, un protagonista de lo más particular. Además, la primera película estrenada en 1981 sirvió
+            de precedente para una gran cantidad de películas de terror que saldrían posteriormente.
+            <br>
+            <br>
+            <a href="cine.html" class="button">+INFO ></a>
+        </p>
+        <img id="army" src="./media/armyofdarkness.png " alt="poster armyofdarkness" data-aos="fade-right">
+    </div>
+
+    <!--Footer con enlaces a redes sociales, Dolly y Modo día/noche-->
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <p> <a href="https://www.linkedin.com/in/miguel-%C3%A1ngel-arcos-reyes-a2b871b5/" id="linkedin" target="_blank">  Miguel Ángel Arcos</a> Copyright © 2021 - CENEC 1º DAM - Proyecto Web</p>
+                <a href="https://cutt.ly/Vvu2NcD" target="_blank"><img class="ytnormal" src="./media/youtube-logo.png" alt="Logo Youtube" height="30px"></a>
+                <a href="https://twitter.com/EvilDead" target="_blank"><img class="twnormal" src="./media/Twitter-Logo.png" alt="Logo Twitter" height="30px"></a>
+                <a href="https://www.instagram.com/ashvsevildead/?hl=es" target="_blank"><img class="ignormal" src="./media/instagram-logo.png" alt="Logo instagram" height="30px"></a>
+                <a href="./dolly.html"><img class="dollynormal" src="./media/DOLLY-logo.png" alt="Logo dolly" height="30px"></a>
+                <a class="botomododia"><img onclick="cambiarModo()" src="./media/botonsol.png" alt="boton modo noche" height="30px"></a>
+                <a class="botomodonoche"> <img onclick="cambiarModo2()" src="./media/lunaboton.png" alt="boton modo noche" height="30px"></a>
+            </div>
+
+
+
+        </div>
+    </footer>
+
+    <!--importación de javascript-->
+    <script src="./js/login.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/universo.js"></script>
+
+
+
+</body>
+
+</html>

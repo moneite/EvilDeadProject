@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Evil Dead Project - La mejor web sobre esta saga de culto </title>
+
+    <!-- una fuente de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+    <link href="./css/index.css" rel="stylesheet" />
+    <link href="./css/cine.css" rel="stylesheet" />
+    <link href="./css/dolly.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- solo aquellos estilos que solo aplican a esta pagina -->
+
+
+    <!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./media/icono.png" />
+    <link href='https://css.gg/css' rel='stylesheet'>
+
+    <!-- importacion de la libreria de animaciones para fotos -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+</head>
+<!--inicio del body-->
+
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+
+                <a href="index.html"><img class="logoblanco" src="./media/logodolly.png" alt="Logo de Evil Dead" height="80px"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+
+
+
+                    <li id="loginOculto">
+                        <a href="login.html"><img id="login" class="loginIcono" src="./media/login.png " alt="icono de login"></a>
+                    </li>
+                    <div id="conectado"></div>
+
+                    <li id="logOutTxt">
+                        <a onclick="cerrarSesion()"><img id="logout" class="loginIcono" src="./media/logout.png " alt="icono de logout"></a>
+                    </li>
+
+                    <a id="pdf" href="./media/MemoryDolly.pdf" target="_blank"><img id="logopdf" src="./media/logopdf.png" alt="LogoPDF"></a>
+                </ul>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <!--Mensaje visible en móvil-->
+    <div class="MensajeMovil">
+        <h1>"Si quieres ver un efecto molón de Dolly Zoom y otro de Ken Burns tienes que ver este enlace desde un pc"</h1>
+        <img id="ashfigure" src="./media/ashfigure.png" alt="ash guiñando" />
+    </div>
+    <!--Imágenes para efecto Dolly-->
+    <div class="container2">
+        <div class="front"><img id="ashDolly" src="./media/ash.png" alt="frente del efecto" /></div>
+        <div class="background"><img src="./media/Evil-dead-2-cabin.jpg" alt="fondo del efecto" /></div>
+    </div>
+    <!--Imagen efecto Ken Burns-->
+    <div class="image-wrap">
+        <img src="./media/evildeadWallpaper.jpg" alt="evilDeadWallpaper">
+    </div>
+    <!--importación de javascript-->
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

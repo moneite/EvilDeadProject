@@ -1,0 +1,504 @@
+/*
+css
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+
+/*estilos aplicados al menú*/
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+}
+
+
+/*logo del interior del menú*/
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 3rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.nav div.logo a:hover {
+    color: #00E676;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #fff;
+    line-height: 65px;
+    font-size: 2.4rem;
+    text-shadow: 0px 2px #000000;
+}
+
+
+/*cambio del cursor cuando pasemos el ratón por la parte superior del menú*/
+
+.nav div.main_list ul li a:hover {
+    color: #d60909;
+    font-weight: bolder;
+    cursor: url("../media/manoevildead.png"), auto;
+}
+
+
+/*establecemos el estilo de la clase home entre lo que se incluye su fondo*/
+
+.home {
+    width: 100%;
+    height: 100vh;
+    box-shadow: inset 0 0 45em 0 #000;
+    background-image: url("../media/background1.gif");
+    background-size: cover;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.nav a {
+    font-weight: bold;
+}
+
+
+/*entre 768 px y 1034px de anchura cambiamos el margen*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+}
+
+
+/*animaciones del menú de movil*/
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+.affix {
+    padding: 0;
+    background-color: #111;
+}
+
+.myH2 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.myP {
+    text-align: justify;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 20px;
+}
+
+@media all and (max-width:700px) {
+    .myP {
+        padding: 2%;
+    }
+}
+
+
+/*tamaño del nav cuando esté scrolleada la página*/
+
+.nav.scrolled {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 200ms linear;
+    transition: 200ms linear;
+    padding-top: 0%;
+}
+
+.nav.scrolled div.main_list ul li a {
+    text-shadow: none;
+}
+
+.logoblanco {
+    display: none;
+}
+
+.logoblanco.scrolled {
+    display: inline;
+    transition: 600ms linear;
+}
+
+.logoWeb {
+    -webkit-filter: drop-shadow(10px 10px 10px #222);
+    filter: drop-shadow(10px 10px 10px #222);
+}
+
+.nav div.main_list ul li a img {
+    display: none;
+}
+
+.nav div.main_list ul li a:hover img {
+    display: inline;
+    height: 35px;
+}
+
+#login {
+    display: inline;
+    height: 50px;
+}
+
+#logout {
+    display: none;
+    height: 50px;
+}
+
+#ZonaFan {
+    display: none;
+}
+
+
+/*cambio de imágenes cuando hacemos hover en el login*/
+
+#logout:hover {
+    content: url('../media/logout-rojo.png')
+}
+
+#login:hover {
+    content: url('../media/login-rojo.png')
+}
+
+#logoGrande {
+    display: block;
+    margin: auto;
+    padding-top: 20%;
+    width: 100%;
+}
+
+#conectado {
+    display: none;
+    font-size: 15px;
+    padding-right: 20px;
+}
+
+#logOutTxt {
+    padding-right: 10px;
+}
+
+.myP {
+    padding-left: 15%;
+    padding-right: 5%;
+    font-size: x-large;
+}
+
+#div2 {
+    display: flex;
+    align-items: center;
+}
+
+#army {
+    min-width: 32%;
+    margin-right: 0px;
+    display: hidden;
+}
+
+.myH2 {
+    color: #d60909;
+}
+
+a.button {
+    padding: 0.3em 1.2em;
+    margin-left: 0%;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+    color: #FFFFFF;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+    background-color: #f14e4e;
+}
+
+a.button:hover {
+    border-color: rgba(255, 255, 255, 1);
+    font-size: large;
+    background-color: #f85757;
+}
+
+.footer {
+    width: 100%;
+    background: #9e0c0c67;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+    font-size: medium;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+/*establecemos el footer y sus botones y dimensiones*/
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    margin-top: 0;
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+}
+
+.botomododia:hover,
+.botomodonoche:hover {
+    transition: 0.9s;
+    filter: invert(1);
+}
+
+.botomodonoche {
+    display: none;
+}
+
+#sobreMi {
+    display: inline-block;
+}
+
+
+/*caracteristicas para dispositivos con dimensiones mayores de 900px*/
+
+@media all and (min-width: 900px) {
+    .ytnormal:hover {
+        transition: 0.9s;
+        filter: invert(1);
+        content: url('../media/youtube-logo-sangre.png');
+    }
+    .twnormal:hover {
+        transition: 0.9s;
+        filter: invert(1);
+        content: url('../media/Twitter-Logo-sangre.png');
+    }
+    .ignormal:hover {
+        transition: 0.9s;
+        filter: invert(1);
+        content: url('../media/instagram-logo-sangre.png');
+    }
+    .dollynormal:hover {
+        transition: 0.9s;
+        filter: invert(1);
+        content: url('../media/DOLLY-logo2.png');
+        transform: scale(1.2);
+    }
+}
+
+#linkedin {
+    color: #fff;
+}
+
+@media all and (max-width: 30em) {
+    a.button {
+        display: block;
+        margin: 0.2em auto;
+    }
+}
+
+
+/*establecemos diferentes parámetros para adaptar lo anterior a dispositivos con pantalla de menos de 968px de ancho*/
+
+@media screen and (max-width:968px) {
+    body {
+        overflow-x: hidden;
+    }
+    #logoGrande {
+        display: none;
+    }
+    .home {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .navTrigger {
+        display: block;
+        transition: 110ms;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        background-position: center top;
+        opacity: 0.8;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    #conectado {
+        width: 95%;
+        text-align: right;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+    .logoblanco {
+        display: inline;
+    }
+    #div2 {
+        display: inline;
+        align-items: center;
+    }
+    #army {
+        width: 60%;
+        margin-left: 25%;
+    }
+    a.button {
+        float: left;
+    }
+    .footer {
+        text-align: left;
+        padding-bottom: 1%;
+        padding-top: 0%;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 100%;
+    }
+    .footer a {
+        margin-left: 18%;
+    }
+    .footer p {
+        text-align: center;
+    }
+    .myP {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}

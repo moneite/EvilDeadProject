@@ -1,0 +1,606 @@
+/*
+JavaScript
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+*/
+
+
+/*establecemos el fondo y caraceterísticas de esta sección*/
+
+.home {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 45em 0 #000;
+    background-image: url("../media/evildead1bg.jpg");
+    background-size: cover;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+
+/*establecemos el fondo de esta sección*/
+
+#peli2 {
+    background-image: url("../media/evildead2bg.jpg");
+}
+
+
+/*establecemos el fondo de esta sección*/
+
+#peli3 {
+    background-image: url("../media/evildead3bg.jpg");
+}
+
+
+/*establecemos el fondo de esta sección*/
+
+#serie {
+    background-image: url("../media/evildead4bg.jpg");
+}
+
+.myP {
+    text-align: justify;
+    font-size: 200%;
+    padding-left: 15%;
+    padding-right: 5%;
+}
+
+.myP2 {
+    text-align: justify;
+    font-size: 200%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+/*cambiamos el padding del texto en pantallas con menos de 700px de ancho*/
+
+@media all and (max-width:700px) {
+    .myP {
+        padding: 2%;
+    }
+}
+
+
+/*diferentes ajustes del menú, como pegarlo a la parte superior de la pantalla al hacer scroll*/
+
+.nav {
+    z-index: 10;
+    background-color: rgb(0, 0, 0);
+    transition: background-color 200ms linear;
+}
+
+.nav.scrolled {
+    transition: 200ms linear;
+    padding-top: 0%;
+}
+
+.logoblanco {
+    display: inline;
+    transition: display 200ms linear;
+}
+
+#div2 {
+    display: flex;
+    align-items: center;
+}
+
+#army {
+    min-width: 32%;
+    margin-right: 0px;
+    display: hidden;
+}
+
+.myH2 {
+    color: #d60909;
+}
+
+.fondo {
+    display: flex;
+}
+
+
+/*diferentes sombras a la imagen*/
+
+#logopeli1 {
+    -webkit-filter: drop-shadow(10px 10px 10px #222);
+    filter: drop-shadow(10px 10px 10px #222);
+    width: 40%;
+    display: inline-flex;
+}
+
+.divlogopeli1 {
+    width: 30%;
+    padding-top: 110px;
+    padding-left: 6%;
+}
+
+.divposterpeli1 {
+    padding-bottom: 0%;
+    display: flex;
+    position: relative;
+    top: 0;
+}
+
+#posterpeli1 {
+    padding-bottom: 0%;
+    display: block;
+    margin-bottom: 0%;
+    height: auto;
+    width: auto;
+}
+
+#logopeli2 {
+    -webkit-filter: drop-shadow(10px 10px 10px #222);
+    filter: drop-shadow(10px 10px 10px #222);
+    width: 60%;
+    display: inline-flex;
+}
+
+.divlogopeli2 {
+    width: 30%;
+    padding-left: 70%;
+    padding-top: 2%;
+}
+
+.divposterpeli2 {
+    padding-bottom: 0%;
+    display: flex;
+    z-index: 9;
+}
+
+#posterpeli2 {
+    padding-bottom: 0%;
+    display: block;
+    margin-bottom: 0%;
+}
+
+#posterserie {
+    padding-bottom: 0%;
+    display: inline;
+    margin-bottom: 0%;
+    width: 90%;
+}
+
+#necronomiconpng {
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+
+#logoserie {
+    -webkit-filter: drop-shadow(10px 10px 10px #222);
+    filter: drop-shadow(10px 10px 10px #222);
+    width: 80%;
+    display: inline-flex;
+}
+
+#logopeli3 {
+    -webkit-filter: drop-shadow(10px 10px 10px #222);
+    filter: drop-shadow(10px 10px 10px #222);
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+
+#button2 {
+    background-color: rgb(11, 97, 97);
+}
+
+#button3 {
+    background-color: brown;
+}
+
+#button4 {
+    background-color: rgb(110, 21, 65);
+}
+
+.ficha {
+    font-size: smaller;
+}
+
+
+/*modal que incluye el slider con fotos*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 60px 62px 0px 62px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.596);
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 0 0 0 0;
+    width: 80%;
+    max-width: 1200px;
+}
+
+
+/*slides que se encuentran ocultos cuando no hacemos click en imágenes*/
+
+.slide {
+    display: none;
+}
+
+.image-slide {
+    width: 100%;
+}
+
+
+/*iconos activos en visible e inactivos invisbles hasta hacer hover*/
+
+#sierra {
+    display: inline;
+    height: 35px;
+}
+
+#libro,
+#escopeta,
+#cabaña {
+    display: none;
+}
+
+#universo:hover img,
+#zonafanenlace:hover img,
+#sobremienlace:hover img {
+    display: inline;
+    height: 35px;
+}
+
+#cine:hover,
+#zonafanenlace:hover,
+#sobremienlace:hover {
+    color: red;
+}
+
+#cine {
+    color: red;
+}
+
+img.active {
+    opacity: 1;
+}
+
+
+/*diferentes iconos del slider*/
+
+.close {
+    color: rgb(255, 0, 0);
+    position: sticky;
+    top: 50px;
+    margin-right: 0px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.previous,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.previous:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal img {
+    width: 40%;
+    margin-left: 25%;
+}
+
+#posterpeli2movil,
+#movil,
+#divmovil3,
+#posterseriemovil {
+    display: none;
+}
+
+.divlogopeli3 {
+    width: 100%;
+}
+
+.divposterpeli3 {
+    padding-bottom: 0%;
+    display: flex;
+    z-index: 9;
+    width: 100%;
+}
+
+#ashPintado {
+    height: 550px;
+}
+
+#evilash {
+    height: 550px;
+}
+
+.overlayVideoGeneral {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.87);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#video {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#button2:hover {
+    cursor: pointer;
+}
+
+
+/*margen de los sliders al mostrarse*/
+
+#Lightbox,
+#Lightbox2,
+#Lightbox3 {
+    top: 15px;
+}
+
+@media all and (max-width: 30em) {
+    a.button {
+        display: block;
+        margin: 0.2em auto;
+    }
+}
+
+@media all and (max-width: 1218px) {
+    .divposterpeli1 {
+        display: inline;
+        width: 100%;
+    }
+    #posterpeli1 {
+        width: 100%;
+    }
+}
+
+
+/*establecemos los ajustes responsive*/
+
+@media screen and (max-width:968px) {
+    body {
+        overflow-x: hidden;
+    }
+    .home {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        background-position: center top;
+        opacity: 0.8;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        font-size: 3rem;
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+    .logoblanco {
+        display: inline;
+    }
+    #div2 {
+        display: inline;
+        align-items: center;
+    }
+    #army {
+        width: 60%;
+        margin-left: 25%;
+    }
+    #logopeli1 {
+        width: 100%;
+        margin-left: 100%;
+    }
+    #posterpeli2movil {
+        display: inline;
+        padding-top: 5%;
+        width: 35%;
+        margin-right: 100%;
+    }
+    .divlogopeli2 {
+        padding-left: 30%;
+        width: 45%;
+    }
+    .divposterpeli2 {
+        display: list-item;
+    }
+    #logopeli2 {
+        width: 100%;
+    }
+    #posterpeli2 {
+        display: none;
+    }
+    a.button {
+        float: left;
+    }
+    .footer {
+        text-align: left;
+        padding-bottom: 1%;
+        padding-top: 0%;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 100%;
+    }
+    .footer a {
+        margin-left: 18%;
+    }
+    .footer p {
+        text-align: center;
+    }
+    #salto {
+        display: inline;
+    }
+    .modal img {
+        width: 20%;
+        margin-top: 10%;
+        margin-left: 0%;
+    }
+    .myP2 {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #button2,
+    #button3,
+    #button4 {
+        font-size: small;
+    }
+    #button2:hover,
+    #button3:hover,
+    #button4:hover {
+        font-size: large;
+    }
+    .modal img {
+        width: 100%;
+        margin-left: 0%;
+    }
+    .modal-content {
+        margin-top: 50px;
+        margin-right: 50px;
+    }
+    .modal {
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-top: 15%;
+    }
+    #divmovil3 {
+        display: inline;
+        width: 100%;
+    }
+    #evilash,
+    #ashPintado {
+        display: none;
+    }
+    .posterpeli3movil {
+        width: 30%;
+    }
+    #ashPintadoMovil {
+        position: absolute;
+        right: 0;
+    }
+    #logopeli3 {
+        width: 60%;
+    }
+    #video iframe {
+        width: 300px;
+        height: 168px;
+    }
+    *,
+    body,
+    html {
+        overflow-x: none!important;
+    }
+    #necronomiconpngmovil {
+        display: inline;
+        margin: auto;
+        width: 40%;
+    }
+    #necronomiconpng {
+        display: none;
+    }
+    #posterserie {
+        display: none;
+    }
+    #posterseriemovil {
+        display: block;
+        margin: auto;
+        width: 35%;
+    }
+    #divlogoserie {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    #logoserie {
+        display: block;
+        margin: auto;
+    }
+    #serieposterdivmovil {
+        padding-top: 5%;
+    }
+}

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Evil Dead Project - La mejor web sobre esta saga de culto </title>
+
+    <!-- una fuente de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+    <link href="./css/index.css" rel="stylesheet" />
+    <link href="./css/cine.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- solo aquellos estilos que solo aplican a esta pagina -->
+
+
+    <!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./media/icono.png" />
+    <link href='https://css.gg/css' rel='stylesheet'>
+    <!-- importacion de la libreria de animaciones para fotos -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+</head>
+<!--inicio del body-->
+
+<body>
+    <!--Menú principal-->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+
+                <a href="index.html"><img class="logoblanco" src="./media/logoblanco.png" alt="Logo de Evil Dead" height="80px"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <a id="cine" href="cine.html"><img id="sierra" src="./media/chainsaw.png" alt="Sierra de Evil Dead">Cine</a>
+                    </li>
+                    <li>
+                        <a id="universo" href="universo.html"><img id="libro" src="./media/libro.png " alt="Libro de Evil Dead">Universo</a>
+                    </li>
+                    <li id="ZonaFan">
+                        <a href="./zonafan.html" id="zonafanenlace"><img id="escopeta" src="./media/escopeta.png" alt="Escopeta de Evil Dead">Zona Fan</a>
+                    </li>
+                    <li id="sobreMi">
+                        <a href="./datos.html" id="sobremienlace"><img id="cabaña" src="./media/cabaña.png " alt="Cabaña de Evil Dead">Sobre Mí</a>
+                    </li>
+                    <li id="loginOculto">
+                        <a href="login.html"><img id="login" class="loginIcono" src="./media/login.png " alt="icono de login"></a>
+                    </li>
+                    <div id="conectado"></div>
+
+                    <li id="logOutTxt">
+                        <a onclick="cerrarSesion()"><img id="logout" class="loginIcono" src="./media/logout.png " alt="icono de logout"></a>
+                    </li>
+                </ul>
+            </div>
+            <span class="navTrigger ">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+
+        </div>
+    </nav>
+
+    <!--Sección con datos de la primera película-->
+    <section class="home " id="noche1">
+        <div class="divlogopeli1">
+            <img id="logopeli1" src="./media/the-evil-dead-1981.png" alt="Logo primera pelicula" data-aos="zoom-in">
+        </div>
+        <div class="divposterpeli1">
+            <div>
+                <p class="myP ">
+                    <span class="ficha"> <b>Año:</b> 1981 | <b>Duración:</b> 85 min |<br id="salto"> <b>Título en España: </b>Posesión Infernal<br><b>Reparto Principal: </b> Bruce Campbell | Ellen Sandweiss | Betsy Baker | Richard DeManincor  </span>
+            <br><br> The Evil Dead es una película de origen estadounidense, dirigida y escrita por Sam Raimi. Está protagonizada por Bruce Campbell y Ellen Sandweiss. Su trama es sencilla, girando en torno a un grupo de jóvenes que decide pasar unos
+            días en una cabaña abandonada en el bosque, hasta que despiertan al mal invocándolo a través de los pasajes del Necronomicón. Se considera un icono del cine de terror de serie B y tras su éxito le siguieron dos secuelas. Es la película que
+            comenzó todo el fenómeno de Evil Dead y que a pesar de su mal recibimiento inicial, fue ganando adeptos gracias al "boca a boca" y los videoclubs.
+
+            <br>
+            <br>
+            <!--Botones-->
+            <span class="botones"><a onclick= "overlayOn()" class="button" id="button2">+Trailer 🎬</a> <a href="#" class="button" id="button3"onclick="openLightbox();toSlide(1)">+Imágenes 🖼️</a> <a href="#" onclick="extras();" class="button" id="button4">+Extras ❕</a></span>
+
+            </p>
+            <!--Vídeo oculto-->
+            <div id="overlayVideo" class="overlayVideoGeneral" onclick="overlayOff()">
+                <div id="video"><iframe width="900" height="506" src="https://www.youtube.com/embed/NL6mioAlpJk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            </div>
+
+            <!--Slider de fotos oculto-->
+            <div id="Lightbox" class="modal">
+                <span class="close pointer" onclick="closeLightbox()">&times;</span>
+                <div class="modal-content">
+                    <div class="slide-gallery1">
+                        <img src="./media/sliders/promoEV1-1.jpg" class="image-slide-gallery1" alt="Foto promocional de Evil Dead" />
+                    </div>
+                    <div class="slide-gallery1">
+                        <img src="./media/sliders/promoEV1-2.jpg" class="image-slide-gallery1" alt="Foto promocional de Evil Dead" />
+                    </div>
+                    <div class="slide-gallery1">
+                        <img src="./media/sliders/promoEV1-3.jpg" class="image-slide-gallery1" alt="Foto promocional de Evil Dead" />
+                    </div>
+                    <div class="slide-gallery1">
+                        <img src="./media/sliders/promoEV1-4.jpg" class="image-slide-gallery1" alt="Foto promocional de Evil Dead" />
+                    </div>
+                    <div class="slide-gallery1">
+                        <img src="./media/sliders/promoEV1-5.jpg" class="image-slide-gallery1" alt="Poster Evil Dead" />
+                    </div>
+                    <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+            </div>
+
+
+
+        </div>
+        <!--Imagen visible en móvil-->
+        <img id="posterpeli1" src="./media/Evildead1.png" alt="Poster de Evil Dead" data-aos="fade-right">
+
+        </div>
+        </section>
+        <!--Sección con datos de la segunda película-->
+        <section class="home " id="peli2">
+            <div class="divlogopeli2">
+                <img id="logopeli2" src="./media/the-evil-dead-2.png" alt="Logo primera pelicula" data-aos="zoom-in">
+            </div>
+            <div class="divposterpeli2">
+                <div>
+                    <img id="posterpeli2" src="./media/esqueletoEV2.png" alt="Poster de Evil Dead" data-aos="fade-right">
+                </div>
+                <div>
+                    <p class="myP2">
+                        <span class="ficha"> <b>Año:</b> 1987 | <b>Duración:</b> 86 min |<br id="salto"> <b>Título en España: </b>Terroríficamente Muertos<br><b>Reparto Principal: </b> Bruce Campbell | Sarah Berry | Dan Hicks | Ted Raimi | Theresa Tilly | Bob Dorian </span>                        <br><br> Evil Dead 2 es la segunda película de la saga, dirigida de nuevo por Sam Raimi y protagonizada por el polifacético Bruce Campbell. Podría decirse que es un remake de la primera parte añadiendo más comedia, más gore, más
+                        acción y por supuesto, más presupuesto. Durante esta secuela el Necronomicón Ex Mortis, o libro de los muertos, vuelve a ser el culpable de liberar el mal y de convertir a los amigos de Ash en demonios (deadites). En esta película
+                        se forma del todo el personaje de Ash Williams ya que es aquí donde coge por primera vez la sierra mecánica. Por otra parte, el filme cuenta con un final abierto y perfectamente continuado en su tercera entrega.
+
+                        <br>
+                        <br>
+                        <!--Botones-->
+                        <span class="botones"><a onclick= "overlayOn2()" class="button" id="button2">+Trailer 🎬</a> <a href="#" class="button" id="button3" onclick="openLightbox2();toSlide2(1)">+Imágenes 🖼️</a> <a href="#" onclick="extras();" class="button" id="button4">+Extras ❕</a></span>
+                    </p>
+                    <!--Vídeo oculto-->
+                    <div id="overlayVideo2" class="overlayVideoGeneral" onclick="overlayOff2()">
+                        <div id="video"><iframe width="900" height="506" src="https://www.youtube.com/embed/s7WNgzilRBw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    </div>
+                    <!--Slider de fotos oculto-->
+                    <div id="Lightbox2" class="modal">
+                        <span class="close pointer" onclick="closeLightbox2()">&times;</span>
+                        <div class="modal-content" id="light2">
+                            <div class="slide-gallery2">
+                                <img src="./media/sliders/promoEV2-1.jpg" class="image-slide-gallery2" alt="Foto promocional de Evil Dead 2" />
+                            </div>
+                            <div class="slide-gallery2">
+                                <img src="./media/sliders/promoEV2-2.jpg" class="image-slide-gallery2" alt="Foto promocional de Evil Dead 2" />
+                            </div>
+                            <div class="slide-gallery2">
+                                <img src="./media/sliders/promoEV2-3.jpg" class="image-slide-gallery2" alt="Foto promocional de Evil Dead 2" />
+                            </div>
+                            <div class="slide-gallery2">
+                                <img src="./media/sliders/promoEV2-4.jpg" class="image-slide-gallery2" alt="Foto promocional de Evil Dead 2" />
+                            </div>
+
+                            <div class="slide-gallery2">
+                                <img src="./media/sliders/promoEV2-5.jpg" class="image-slide-gallery2" alt="Poster de Evil Dead 2" />
+                            </div>
+
+                            <a class="previous" onclick="changeSlide2(-1)">&#10094;</a>
+                            <a class="next" onclick="changeSlide2(1)">&#10095;</a>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!--Imagen visible en móvil-->
+                <div>
+                    <div>
+                        <img id="posterpeli2movil" src="./media/esqueletoEV2.png" alt="Poster de Evil Dead" data-aos="fade-right">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Sección con datos de la tercera película-->
+        <section class="home " id="peli3">
+            <div class="divlogopeli3">
+                <img id="logopeli3" src="./media/army-of-darkness-logo.png" alt="Logo primera pelicula" data-aos="zoom-in">
+            </div>
+            <div class="divposterpeli3">
+                <div>
+                    <img id="evilash" src="./media/EvilAshArmyOfDarkness.png" alt="Poster de Evil Dead" data-aos="fade-right">
+                </div>
+                <div>
+                    <p class="myP2">
+                        <span class="ficha"> <b>Año:</b>1992 | <b>Duración:</b> 89 min |<br id="salto"> <b>Título en España: </b>El Ejército de las Tinieblas<br><b>Reparto Principal: </b> Bruce Campbell | Embeth Davidtz | Marcus Gilbert | Ian Abercrombie | Richard Grove </span>
+                        <br><br> Army Of Darkness es la tercera entrega de la saga aparecida en el año 1992. En esta ocasión la acción se retoma al final de la segunda entrega, tras el viaje realizado en el tiempo por parte de Ash al tratar de devolver
+                        las fuerzas del mal a su origen. Por ello, gran parte de la cinta está ambientada en el año 1300, creando así anacronismos propios de la convivencia de una persona del siglo XX en la sociedad del S.XIV. Está entrega abandona en
+                        su totalidad el terror para centrarse en la comedia, la fantasía y la acción.
+                        <br>
+                        <br>
+                        <!--Botones-->
+                        <span class="botones"><a onclick="overlayOn3()" class="button" id="button2">+Trailer 🎬</a> <a href="#" class="button" id="button3" onclick="openLightbox3();toSlide3(1)">+Imágenes 🖼️</a> <a href="#" onclick="extras();" class="button" id="button4">+Extras ❕</a></span>
+                        <img id="necronomiconpng" src="./media/necronomicon.png" alt="Foto promocional Army of Darkness" data-aos="zoom-in" />
+                    </p>
+                    <!--Vídeo oculto-->
+                    <div id="overlayVideo3" class="overlayVideoGeneral" onclick="overlayOff3()">
+                        <div id="video"><iframe width="900" height="506" src="https://www.youtube.com/embed/UHZQEtG8xYo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <!--Slider de fotos oculto-->
+                <div id="Lightbox3" class="modal">
+                    <span class="close pointer" onclick="closeLightbox3()">&times;</span>
+                    <div class="modal-content" id="light3">
+                        <div class="slide-gallery3">
+                            <img src="./media/sliders/promoEV3-1.jpg" class="image-slide-gallery3" alt="Foto promocional Army of Darkness" />
+                        </div>
+                        <div class="slide-gallery3">
+                            <img src="./media/sliders/promoEV3-2.jpg" class="image-slide-gallery3" alt="Foto promocional Army of Darkness" />
+                        </div>
+                        <div class="slide-gallery3">
+                            <img src="./media/sliders/promoEV3-3.jpg" class="image-slide-gallery3" alt="Foto promocional Army of Darkness" />
+                        </div>
+                        <div class="slide-gallery3">
+                            <img src="./media/sliders/promoEV3-4.jpg" class="image-slide-gallery3" alt="Foto promocional Army of Darkness" />
+                        </div>
+                        <div class="slide-gallery3">
+                            <img src="./media/sliders/promoEV3-5.jpg" class="image-slide-gallery3" alt="Poster Army of Darkness" />
+                        </div>
+
+                        <a class="previous" onclick="changeSlide3(-1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide3(1)">&#10095;</a>
+
+
+                    </div>
+                </div>
+
+                <div class="divash">
+                    <img id="ashPintado" src="./media/AshArmyOfDarkness.png" alt="Ash en army of darkness" data-aos="fade-right">
+                </div>
+
+
+
+
+            </div>
+            <!--Imagen visible en móvil-->
+            <div id="divmovil3">
+                <img class="posterpeli3movil" id="evilashmovil" src="./media/EvilAshArmyOfDarkness.png" alt="Poster de Evil Dead" data-aos="fade-right">
+                <img id="necronomiconpngmovil" src="./media/necronomicon.png" alt="Foto promocional Army of Darkness" data-aos="zoom-in" />
+                <img class="posterpeli3movil" id="ashPintadoMovil" src="./media/AshArmyOfDarkness.png" alt="Poster de Evil Dead" data-aos="fade-left">
+            </div>
+        </section>
+
+        </section>
+        <!--Sección con datos de la serie-->
+        <section class="home " id="serie">
+            <div class="divlogopeli2" id="divlogoserie">
+                <img id="logoserie" src="./media/Ash-vs-Evil-Dead_logo.png" alt="Logo primera pelicula" data-aos="zoom-in">
+            </div>
+            <div class="divposterpeli2">
+
+                <img id="posterserie" src="./media/ashvsevildead.png" alt="Poster de Evil Dead" data-aos="fade-right">
+                <div>
+                    <p class="myP2">
+                        <span class="ficha"> <b>Año:</b> 2015-2018 | <b>Duración:</b> 25-37 min |<br id="salto"> <b>Episodios: </b>30 Episodios<br><b>Reparto Principal: </b> Bruce Campbell | Ray Santiago | Dana DeLorenzo | Jill Marie Jones | Lucy Lawless | Ted Raimi </span>
+                        <br><br> Ash regresa más de 20 años después en una serie de televisión producida por la cadena Norteamericana Starz y que contó con 3 temporadas. La trama se situa 30 años después de lo sucedido en Army Of Darkness. Ash continua
+                        con su vida como empleado en el Value Stop, viviendo en un remolque junto a su iguana Eli y que junto a Pablo y Kelly deberá hacer de nuevo frente a las fuerzas del mal invocadas por el Necronomicon Ex Mortis. Durante la serie
+                        se profundiza en el universo de Evil Dead, en la historia de Ash Williams y en el origen del Libro de los Muertos. Gozó de una gran acogida por parte de los nuevos y no tan nuevos seguidores y se alzó como la comedia de terror
+                        más gamberra que ha dado la televisión.
+                        <br>
+                        <br>
+                        <!--Botones-->
+                        <span class="botones"><a onclick= "overlayOn5()" class="button" id="button2">+Trailer 🎬</a> <a href="#" class="button" id="button3" onclick="openLightbox5();toSlide5(1)">+Imágenes 🖼️</a> <a href="#" onclick="extras();" class="button" id="button4">+Extras ❕</a></span>
+                    </p>
+                    <!--Vídeo oculto-->
+                    <div id="overlaySerie" class="overlayVideoGeneral" onclick="overlayOff5()">
+                        <div id="video"><iframe width="900" height="506" src="https://www.youtube.com/embed/-Yq3jeOmxSk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    </div>
+                    <!--Slider de fotos oculto-->
+                    <div id="Lightbox5" class="modal">
+                        <span class="close pointer" onclick="closeLightbox5()">&times;</span>
+                        <div class="modal-content" id="light2">
+                            <div class="slide-gallery5">
+                                <img src="./media/sliders/promoASVEV-1.jpg" class="image-slide-gallery2" alt="Foto promocional de Ash vs Evil Dead" />
+                            </div>
+                            <div class="slide-gallery5">
+                                <img src="./media/sliders/promoASVEV-2.jpg" class="image-slide-gallery2" alt="Foto promocional de Ash vs Evil Dead" />
+                            </div>
+                            <div class="slide-gallery5">
+                                <img src="./media/sliders/promoASVEV-3.jpg" class="image-slide-gallery2" alt="Foto promocional de Ash vs Evil Dead" />
+                            </div>
+                            <div class="slide-gallery5">
+                                <img src="./media/sliders/promoASVEV-4.jpg" class="image-slide-gallery2" alt="Foto promocional de Ash vs Evil Dead" />
+                            </div>
+
+                            <div class="slide-gallery5">
+                                <img src="./media/sliders/promoASVEV-5.jpg" class="image-slide-gallery2" alt="Poster de Ash vs Evil Dead" />
+                            </div>
+
+                            <a class="previous" onclick="changeSlide5(-1)">&#10094;</a>
+                            <a class="next" onclick="changeSlide5(1)">&#10095;</a>
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!--Imagen visible en móvil-->
+                <div>
+                    <div id="serieposterdivmovil">
+                        <img id="posterseriemovil" src="./media/ashvsevildead.png" alt="Poster de Evil Dead" data-aos="fade-right">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--Footer con enlaces a redes sociales, Dolly y Modo día/noche-->
+        <footer>
+            <div class="footer">
+                <div class="row">
+                    <p>
+                        <a href="https://www.linkedin.com/in/miguel-%C3%A1ngel-arcos-reyes-a2b871b5/" id="linkedin" target="_blank">  Miguel Ángel Arcos</a> Copyright © 2021 - CENEC 1º DAM - Proyecto Web</p>
+                    <a href="https://cutt.ly/Vvu2NcD" target="_blank"><img class="ytnormal" src="./media/youtube-logo.png" alt="Logo Youtube" height="30px"></a>
+                    <a href="https://twitter.com/EvilDead" target="_blank"><img class="twnormal" src="./media/Twitter-Logo.png" alt="Logo Twitter" height="30px"></a>
+                    <a href="https://www.instagram.com/ashvsevildead/?hl=es" target="_blank"><img class="ignormal" src="./media/instagram-logo.png" alt="Logo instagram" height="30px"></a>
+                    <a href="./dolly.html"><img class="dollynormal" src="./media/DOLLY-logo.png" alt="Logo dolly" height="30px"></a>
+                    <a class="botomododia"><img onclick="cambiarModo()" src="./media/botonsol.png" alt="boton modo noche" height="30px"></a>
+                    <a class="botomodonoche"> <img onclick="cambiarModo2()" src="./media/lunaboton.png" alt="boton modo noche" height="30px"></a>
+                </div>
+
+
+
+            </div>
+        </footer>
+
+        <!--importación de javascript-->
+        <script src="./js/login.js"></script>
+        <script src="./js/cine.js"></script>
+        <script src="./js/universo.js"></script>
+
+</body>
+
+</html>

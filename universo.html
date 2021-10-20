@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina: Evil Dead Project
+Asignaturas: Lenguaje de Marcas, Sistemas Informáticos y Entornos de Desarrollo
+Curso: 1º Desarrollo de Aplicaciones Multiplataforma
+Centro: Cenec Málaga
+Autor: Miguel Ángel Arcos Reyes
+Fecha: Mayo 2021
+-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!-- importante SEO para la etiqueta del navegador -->
+    <title>Evil Dead Project - La mejor web sobre esta saga de culto </title>
+
+    <!-- una fuente de Google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+    <link href="./css/index.css" rel="stylesheet" />
+    <link href="./css/cine.css" rel="stylesheet" />
+    <link href="./css/universo.css" rel="stylesheet" />
+
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+    <!-- solo aquellos estilos que solo aplican a esta pagina -->
+
+
+    <!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./media/icono.png" />
+    <link href='https://css.gg/css' rel='stylesheet'>
+
+    <!-- importacion de la libreria de animaciones para fotos -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+</head>
+
+<!--inicio del body-->
+
+<body>
+    <!--Menú principal-->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+
+                <a href="index.html"><img class="logoblanco" src="./media/logoblanco.png" alt="Logo de Evil Dead" height="80px"></a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li>
+                        <a id="cine" href="cine.html"><img id="sierra" src="./media/chainsaw.png" alt="Sierra de Evil Dead">Cine</a>
+                    </li>
+                    <li>
+                        <a id="universo" href="universo.html"><img id="libro" src="./media/libro.png " alt="Libro de Evil Dead">Universo</a>
+                    </li>
+                    <li id="ZonaFan">
+                        <a id="zonafanenlace" href="./zonafan.html"><img id="escopeta" src="./media/escopeta.png" alt="Escopeta de Evil Dead">Zona Fan</a>
+                    </li>
+                    <li id="sobreMi">
+                        <a href="./datos.html" id="sobremienlace"><img id="cabaña" src="./media/cabaña.png " alt="Cabaña de Evil Dead">Sobre Mí</a>
+                    </li>
+                    <li id="loginOculto">
+                        <a href="login.html"><img id="login" class="loginIcono" src="./media/login.png " alt="icono de login"></a>
+                    </li>
+                    <div id="conectado"></div>
+
+                    <li id="logOutTxt">
+                        <a onclick="cerrarSesion()"><img id="logout" class="loginIcono" src="./media/logout.png " alt="icono de logout"></a>
+                    </li>
+                </ul>
+            </div>
+            <span class="navTrigger ">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+
+        </div>
+    </nav>
+
+    <!--Primera Sección sobre comics-->
+    <section class="home">
+        <!--Título animado de la sección-->
+    <div id="divh1"><h1> <span><br id="brMovil"><br >¡ MEJORES CÓMICS DE </span><span>EVIL DEAD!</span></h1>
+        </div>
+        <!--Portadas de los comics-->
+        <div class="comics">
+            <img alt="portada de comic" id="ArmyVsMarvel" src="./media/comics/marvel_zombies.png ">
+            <img alt="portada de comic" id="ATA" src="./media/comics/ATA.png ">
+            <img alt="portada de comic" id="A2A" src="./media/comics/A2A.png ">
+            <img alt="portada de comic" id="FTA" src="./media/comics/FTA.png ">
+            <img alt="portada de comic" id="TLR" src="./media/comics/TLR.png ">
+            <br id="brMovilVisible">
+
+        </div>
+
+        </section>
+
+        <!--Segunda Sección sobre videojuegos-->
+        <section class="home" id="videojuegos">
+            <!--Título animado de la sección-->
+            <div id="divVideojuegos">
+                <h1><span><br id="brMovil">TODOS LOS </span><span> VIDEOJUEGOS DE EVIL DEAD</span></h1>
+            </div>
+        </section>
+        <!--Fichas con datos de los videojuegos-->
+        <div id="fichaJuego">
+            <img alt="portada de videojuego" id="portadaC64" src="./media/videojuegos/evil_dead_c64_cover.png">
+            <div id="textoFicha">
+                <h2>THE EVIL DEAD</h2>
+                <p><b>Desarrollador:</b> Palace Software</p>
+                <p><b>Publisher:</b> Palace Software</p>
+                <p><b>Plataformas:</b> Commodore 64/128, ZX Spectrum</p>
+                <p><b>Género:</b> Acción/Aventuras</p>
+                <p><b>Fecha de Lanzamiento:</b> 1984</p>
+                <p>El primer juego con licencia oficial de Evil Dead fue desarrollado por Michael Fox y publicado en 1984 por la compañía británica Palace Software para la Commodore 64/128 y el ZX Spectrum. El juego venía en un cassette que debías cargar
+                    en el reproductor correspondiente.
+                </p>
+                <p>Para los estándares actuales, el título sería considerado arcaico en cuanto al apartado gráfico, pero está bien ambientado en el tema de la primera película. El juego se desarrolla en el interior y alrededores de la cabaña. El juegador
+                    juega como Ash, quien tiene que enfrentarse a las fuerzas del mal collecionando páginas del Necronomicón antes de que el mal acabe contigo. Ash también puede coger armas como palas, escopetas y hachas. El juego actualmente es gratuito
+                    y puede descargarse desde <a href="http://www.c64.com/?type=1&id=2140" target="_blank ">este enlace</a>.</p>
+            </div>
+            <!--Imagen visible en modo movil-->
+            <img alt="video evil dead juego" id="videoMovil" src="./media/evildeadc64.gif">
+        </div>
+        <br><br><br id="brMovilVisible"><br id="brMovilVisible">
+        <div id="fichaJuego2">
+            <!--Imagen visible en modo movil-->
+            <img alt="portada de videojuego" id="portadapsxmovil" src="./media/videojuegos/evil_dead_psx_cover.png">
+
+            <div id="textoFicha" class="tituloderecha">
+                <h2>EVIL DEAD: HAIL TO THE KING</h2>
+                <p><b>Desarrollador:</b> Heavy Iron Studios</p>
+                <p><b>Publisher:</b> THQ</p>
+                <p><b>Plataformas:</b> Sega Dreamcast, Sony Playstation, PC</p>
+                <p><b>Género:</b> Acción/Aventuras</p>
+                <p><b>Fecha de Lanzamiento:</b> 18/12/2000</p>
+                <p>Hail to the King fue desarrollado por Heavy Iron Studios y publicada por THQ. El juego se localiza en la familiar cabaña en el bosque. El juego expande el universo de las películas con localizaciones como una ciudad, un cementerio,e incluso
+                    Ash viaja en el tiempo a la Edad Media. Hail to the King tambien incluye la voz real del actor protagonista de las películas Bruce Campbell. La versión con mejores gráficos es la de PC, mientras que la de Sony Playstation, debido a
+                    sus limitaciones de hardware se ve más borrosa y pobre. Debido a los gráficos de la época el juego no luce con un aspecto realista.
+                </p>
+                <p>Los escenarios son bastante irregulares aunque su diseño en general es bueno. El juego contó con problemas de jugabilidad y problemas de cámara, los cuales hacen el juego muy difícil y casi injugable. Hail to the King merece la pena solo
+                    si eres un coleccionista y un gran fan de la franquicia Evil Dead.</p>
+            </div>
+            <img alt="portada de videojuego" id="portadapsx" src="./media/videojuegos/evil_dead_psx_cover.png">
+            <!--Imagen visible en modo movil-->
+            <img alt="video evil dead juego" id="videoMovil" src="./media/evildeadpsx.gif">
+        </div> <br><br><br id="brMovilVisible"><br id="brMovilVisible">
+        <div id="fichaJuego3">
+            <img alt="portada de videojuego" id="portadaps2" src="./media/videojuegos/evil_dead_ps2_cover.png">
+            <div id="textoFicha">
+                <h2>EVIL DEAD A FISTFUL OF BOOMSTICK</h2>
+                <p><b>Desarrollador:</b> VIS Interactive PLC</p>
+                <p><b>Publisher:</b> THQ</p>
+                <p><b>Plataformas:</b> Sony Playstation 2, Microsoft XBOX, PC</p>
+                <p><b>Género:</b> Acción/Aventuras</p>
+                <p><b>Fecha de Lanzamiento:</b> 8/04/2003</p>
+                <p> Tras la decepción que supuso el lanzamiento de Hail To The King, THQ decidió seguir adelante con una secuela llamada Fistful of Boomstick. Sus desarrolladores fueron Vis Entertainment, conocidos por el juego State of Emergency. Por ello,
+                    Fistful Of Boomstick fue realizado utilizando una versión modificada del motor de State of Emergency. El juego tiene mejores gráficos, personajes y mejor jugabilidad. Por otra parte, Bruce Campbell vuelve a participar aportando el
+                    doblaje. El juego tiene lugar en Deadborn, Michigan, donde Ash tiene que combatir a los Deadites y al mal que ha sido invocado por el profesor. Fistful of Boomstick incorporó elementos de combos y magia a su jugabilidad.
+                </p>
+                <p>En este título Ash puede derrotar hordas de Deadites atacando con armas en ambas manos y pueden ser utilizadas para realizar diferentes combos. También, tienes la opción de mejorar las armas. Además, Ash cuenta con la habilidad de recitar
+                    hechizos que aprenderá a lo largo de la aventura. En general, el juego es divertido, especialmente para los fans. Cuenta con una historia interesante, personajes nuevos y referencias a todas las películas dentro del juego. Además,
+                    la actuación de voz es una de las mejores realizadas por el actor Bruce Campbell. En resumen, es un "must" que ningún fan de la saga debería perderse.
+                </p>
+            </div>
+            <!--Imagen visible en modo movil-->
+            <img alt="video evil dead juego" id="videoMovil" src="./media/evildeadps2.gif">
+        </div><br><br><br id="brMovilVisible"><br id="brMovilVisible">
+        <div id="fichaJuego4">
+            <!--Imagen visible en modo movil-->
+            <img alt="portada de videojuego" id="portadapsxmovil" src="./media/videojuegos/evil_dead_reg_cover.png">
+
+            <div id="textoFicha" class="tituloderecha">
+                <h2>EVIL DEAD REGENERATION</h2>
+                <p><b>Desarrollador:</b> Cranky Pants Games</p>
+                <p><b>Publisher:</b> THQ</p>
+                <p><b>Plataformas:</b> Sony Playstaion 2, Microsoft XBOX, PC</p>
+                <p><b>Género:</b> Acción/Aventuras</p>
+                <p><b>Fecha de Lanzamiento:</b> 13/9/2005</p>
+                <p>Entra en una nueva experiencia basada en el universo de Evil Dead, en la cual Ash se encuentra arrestado y acusado de asesinato. A causa de esto se encuentra interno en el sanatorio de Sunny Meadows, un sanatorio para criminales locos.
+                    En esta nueva historia, Ash consiguió escapar del mal que se ocultaba en el bosque y aprendió que a partir de ese momento, nunca tendría descanso...
+                </p>
+                <p>En las profundidades del sanatorio, el Dr. Vingo ha combinado la tecnología con el libro de los muertos, también conocido como el Necronomicón para conseguir llevar a cabo sus perversos experimentos. Usando la ciencia demoníaca del Necronomicon
+                    el Dr. consigue liberar el mal alrededor del mundo creando una nueva raza de Deeadites y experimientos fallidos, convirtiendo la realidad en un lugar cercano al Infierno y condenando a la humanidad a un no muy confortable sentimiento
+                    de apocalipsis que solo Ash y su nuevo compañero, Sam, son capaces de evitar.</p>
+            </div>
+            <img alt="portada de videojuego" id="portadareg" src="./media/videojuegos/evil_dead_reg_cover.png">
+            <!--Imagen visible en modo movil-->
+            <img alt="video evil dead juego" id="videoMovil" src="./media/evildeadreg.gif">
+        </div>
+
+
+</body>
+<!--Footer con enlaces a redes sociales, Dolly y Modo día/noche-->
+<footer>
+    <div class="footer ">
+        <div class="row ">
+            <p>
+                <a href="https://www.linkedin.com/in/miguel-%C3%A1ngel-arcos-reyes-a2b871b5/ " id="linkedin " target="_blank ">  Miguel Ángel Arcos</a> Copyright © 2021 - CENEC 1º DAM - Proyecto Web</p>
+            <a href="https://cutt.ly/Vvu2NcD " target="_blank "><img class="ytnormal " src="./media/youtube-logo.png " alt="Logo Youtube " height="30px "></a>
+            <a href="https://twitter.com/EvilDead " target="_blank "><img class="twnormal " src="./media/Twitter-Logo.png " alt="Logo Twitter " height="30px "></a>
+            <a href="https://www.instagram.com/ashvsevildead/?hl=es " target="_blank "><img class="ignormal " src="./media/instagram-logo.png " alt="Logo instagram " height="30px "></a>
+            <a href="./dolly.html"><img class="dollynormal" src="./media/DOLLY-logo.png" alt="Logo dolly" height="30px"></a>
+            <a class="botomododia"><img onclick="cambiarModo()" src="./media/botonsol.png" alt="boton modo noche" height="30px"></a>
+            <a class="botomodonoche"> <img onclick="cambiarModo2()" src="./media/lunaboton.png" alt="boton modo noche" height="30px"></a>
+
+        </div>
+
+
+
+    </div>
+</footer>
+
+<!--importación de javascript-->
+<script src="./js/login.js "></script>
+<script src="./js/cine.js "></script>
+<script src="./js/universo.js "></script>
+
+</body>
+
+</html>
